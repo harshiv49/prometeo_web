@@ -1,6 +1,7 @@
 .template1Formatter{
     display: flex;
     justify-content: center;
+    margin:24px 0;
 }
 .template1Holder{
     border:0.5px solid rgba(0, 0, 0, 0.285);
@@ -9,9 +10,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 5vh;
 }
 .template1ProfileImage{
     border-radius: 50%;
+    height:10vw;
 }
 .template1Header{
     display: flex;
@@ -26,14 +29,16 @@
 .template1NameAndPosition{
     display: flex;
     flex-direction: column;
-    padding:2vh;
+    padding-top: 2vh;
+    width: fit-content;
+    margin-left: 1vw;
 }
 .template1NameAndPosition h2{
-    font-size:3rem;
+    font-size:1.5rem;
     margin:0;
 }
 .template1NameAndPosition h6{
-    font-size:1rem;
+    font-size:0.8rem;
     margin:0;
 }
 .rightHalfHeaderTemplate1{
@@ -74,23 +79,24 @@
     width:50%;
 }
 
-/* .workExperienceTemplate1{
-} */
+ .workExperienceTemplate1 h2{
+    border-bottom:1px solid rgba(0, 0, 0, 0.315);
+} 
 .experienceCardTemplate1{
-    border:2px solid black;
     padding:2vh;
 }
 .experienceCardTemplate1 h3{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
 }
 .experienceCardTemplate1 h5{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     margin: 0;
 }
 .experienceDateAndLocationTemplate1{
     display: flex;
     justify-content:space-between;
+    font-size:0.7rem;
 }
 .experienceListTemplate1{
     list-style-type:disc;
@@ -98,10 +104,60 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-left:1px solid rgba(0, 0, 0, 0.361);
 }
 .experienceListTemplate1 li{
     margin-top:1vh;
+    font-size: 0.6rem;
+}
+/* .educationSectionTemplate1{
+} */
+.educationSectionTemplate1 h2{
+    border-bottom:1px solid rgba(0, 0, 0, 0.315);
+
+}
+
+.educationDetails{
+    padding-left:1vw;
+    border-left:1px solid rgba(0, 0, 0, 0.315);
+
+}
+.educationDetails h4{
+    padding-left:1vw;
+    font-size:1rem;
+}
+.educationDetails h5{
+    padding-left:1vw;
+    font-size:0.8rem;
+
+}
+.educationDetails h6{
+    padding-left:1vw;
+    font-size:0.5rem;
+
 }
 .rightHalfTemplate1MainBody{
     width: 50%; 
+    margin-left:1vw;
+}
+.skillSectionTemplate1 h2{
+    border-bottom:1px solid rgba(0, 0, 0, 0.315);
+    
+}
+.allListSkill{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.allListSkill li{
+    color:white;
+    background-color: #095550;
+    margin:4px 4px;
+    padding:4px 8px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+.projects h2{
+    border-bottom:1px solid rgba(0, 0, 0, 0.315);
+
 }
