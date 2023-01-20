@@ -1,0 +1,24 @@
+.resume{
+    
+    margin:25px;
+    padding: 20px;
+    border: 1px solid black; 
+    min-height: 100vh;
+    width:50vw;
+    flex-direction: column;
+}
+.resume-holder{
+    display: flex;
+    justify-content: center;
+}
+.heading-name{
+    font-size: 31px;
+    color: rgb(73, 73, 235);
+}
+.heading-position{
+    font-size: 24px;
+    color: rgb(109, 109, 109);
+}
+.heading-introduction{
+    font-weight: bold;
+}
