@@ -66,21 +66,76 @@ const template1 = () => {
                 <ul className="experienceListTemplate1">
                   <li>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere! Cumque corporis quibusdam
-                    accusantium cum dolorum autem! In dolores ullam a odit
-                    harum, eum nam praesentium natus odio beatae!
+                    Reprehenderit, magni facere!
                   </li>
                   <li>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere! Cumque corporis quibusdam
-                    accusantium cum dolorum autem! In dolores ullam a odit
-                    harum, eum nam praesentium natus odio beatae!
+                    Reprehenderit, magni facere!
                   </li>
                   <li>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere! Cumque corporis quibusdam
-                    accusantium cum dolorum autem! In dolores ullam a odit
-                    harum, eum nam praesentium natus odio beatae!
+                    Reprehenderit, magni facere!
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+
+          {/* EDUCATION SECTION START */}
+          <div className="educationSectionTemplate1">
+            <h2>EDUCATION</h2>
+            <div className="educationDetails">
+              <h4>Msc in Economics and Business Admin</h4>
+              <h5>The University of California</h5>
+              <h6>09/2010-0/6/2015</h6>
+            </div>
+            <div className="educationDetails">
+              <h4>Msc in Economics and Business Admin</h4>
+              <h5>The University of California</h5>
+              <h6>09/2010-0/6/2015</h6>
+            </div>
+          </div>
+        </div>
+        <div className="rightHalfTemplate1MainBody">
+
+          {/* SKILLS SECTION START */}
+          <div className="skillSectionTemplate1">
+            <h2>SKILLS</h2>
+              <ul className="allListSkill">
+                <li>SEO </li>
+                <li>Public Speaking </li>
+                <li>Negotiation </li>
+                <li>Teamwork </li>
+                <li>Decision Making </li>
+                <li>Research Marketing </li>
+                <li>Artificial Language</li>
+                <li>Sales and Marketing </li>
+              </ul>
+          </div>
+
+          {/* Projects */}
+          <div className="projects">
+            <h2>PROJECTS</h2>
+            <div className="experienceCardTemplate1">
+              <h3>Delusional Car Center</h3>
+              <div className="experienceDateAndLocationTemplate1">
+                <div className="date">09/2014-06/2017</div>
+              </div>
+              <div className="experiencePointsTemplate1">
+                <ul className="experienceListTemplate1">
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit, magni facere!
+                  </li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit, magni facere!
+                  </li>
+                  <li>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit, magni facere!
                   </li>
                   
                 </ul>
@@ -88,7 +143,6 @@ const template1 = () => {
             </div>
           </div>
         </div>
-        <div className="rightHalfTemplate1MainBody">Right Half</div>
       </div>
     </div>
     </div>
