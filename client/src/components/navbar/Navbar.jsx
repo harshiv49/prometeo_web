@@ -10,9 +10,9 @@ function NavigationBar() {
  
   return (
     <Fragment>
-      <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
+      <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" style={{height:"10vh"}}>
         <Container style={{marginTop:'10px'}}>
-          <Navbar.Brand href="/">ScholarPay</Navbar.Brand>
+          <Navbar.Brand href="/">Rizzume</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -25,8 +25,12 @@ function NavigationBar() {
                 RESUMES
               </Link>
 
-              <Link className="nav-link" to="/">
-                EDIT RESUMES
+              <Link className="nav-link" to="/Login">
+                LOGIN
+              </Link>
+
+              <Link className="nav-link" to="/SignUp">
+                SIGN UP 
               </Link>
             </Nav>
           </Navbar.Collapse>

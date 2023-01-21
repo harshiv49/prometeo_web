@@ -9,7 +9,10 @@ const SkillsForm=({skillDetails,setSkillDetails})=>{
           <Form.Group className="mb-3" controlId="tags">
             <Form.Label>Tags</Form.Label>
             <Form.Control type="text" placeholder="Enter Tags" onChange={e=>{
-              setSkillDetails(e.currentTarget.value.split(' '));
+         
+              const result = (e.currentTarget.value.trim().split(/\s+/))
+              setSkillDetails(result);
+         
               // console.log(e.currentTarget.value.split(' '))
             }} />
           </Form.Group>

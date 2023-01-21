@@ -9,6 +9,17 @@
     border-radius: 6px;
     box-shadow: 5px 5px rgb(252, 247, 247);
 }
+.template2{
+    display: flex;
+    gap:10px;
+    padding:16px;
+}
+.scrollableResume{
+overflow-y: scroll;
+width:50%; 
+height:90vh; 
+border:1px solid rgba(0, 0, 0, 0.316);
+}
 .resume-holder{
     display: flex;
     justify-content: center;
@@ -31,21 +42,14 @@
     display: flex;
     list-style-type: none;
 }
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
 
-.skills-tag-list1{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    padding-left:0px;
-}
-.skills-tag-list2{
-    display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-    padding-left:0px;
 }
 
-.skills-tag-list1 li{
+.skills li{
     font-size: 0.8rem;
     padding: 0.3rem 0.9rem;
     margin: 0.1rem;
@@ -56,17 +60,7 @@
     color: white;
 
 }
-.skills-tag-list2 li{
-    font-size: 0.8rem;
-    padding: 0.3rem 0.4rem;
-    margin: 0.1rem;
-  
-    border:none;
-    border-radius: 8px;
-    background-color:  rgb(32, 93, 169);
-    color: white;
 
-}
 
 h1{
     color: rgb(32, 93, 169);
@@ -143,3 +137,15 @@ h1{
    
  }
 
+ .editFormHolderHolder{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    height:50vh;
+ }
+.editFormHolder{
+    display: flex;
+    flex-direction: column;
+    width: 100% ;
+    justify-content: center;
+}

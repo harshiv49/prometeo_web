@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Home from "./components/home/home";
 import PrivateRoute from './components/PrivateRoutes';
+import Home from './components/home/home';
 function App() {
   return (
     <Routes>

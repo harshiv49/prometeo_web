@@ -44,7 +44,7 @@ const ResumeEditForm = ({educationDetails,setEducationDetails,setPersonalDetails
    
   }
   return (
-    <Fragment>
+    <div className="editFormHolder">
     <h1 style={{textAlign:'center',color:'black'}}>BUILD YOUR RESUME</h1>
     <div className="modalOpener" onClick={educationDetailsHandler}>
     <div > EDUCATIONAL DETAILS</div>
@@ -100,7 +100,7 @@ const ResumeEditForm = ({educationDetails,setEducationDetails,setPersonalDetails
 
       
       
-    </Fragment>
+    </div>
   );
 };
 export default ResumeEditForm ;
