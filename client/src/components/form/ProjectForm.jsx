@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import {Form,Container,Button} from 'react-bootstrap'
 
 const ProjectForm=({projectDetails,setProjectDetails})=>{
+  console.log(projectDetails)
   const submitHandler=(e)=>{
     e.preventDefault();
   }
@@ -9,13 +10,14 @@ return(
 
 <Container style={{width:'80%'}}>
         <Form onSubmit={submitHandler}>
-          <Form.Group className="mb-3" controlId="work-heading">
+        
+          <Form.Group className="mb-3" controlId="project-heading">
             <Form.Label>Heading</Form.Label>
             <Form.Control type="text"  value={projectDetails.heading} onChange={(event)=>setProjectDetails({...projectDetails,heading:event.target.price})} placeholder="Enter heading" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="work-sub-heading">
+          <Form.Group className="mb-3" controlId="project-sub-heading">
             <Form.Label>Sub heading</Form.Label>
-            <Form.Control type="text" value={projectDetails.sub_heading} onChange={(event)=>setProjectDetails({...projectDetails,sub_heading:event.target.price})} placeholder="Enter Sub Heading" />
+            <Form.Control type="text" value={projectDetails.subheading} onChange={(event)=>setProjectDetails({...projectDetails,subheading:event.target.price})} placeholder="Enter Sub Heading" />
           </Form.Group>
        
           <Form.Group className="mb-3" controlId="description1">

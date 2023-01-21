@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import {useState,useRef} from 'react'
 import image1 from "../../assets/Template1Image.png";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPhoneFill } from "react-icons/bs";
@@ -8,9 +9,68 @@ import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { Fragment } from "react";
 import ResumeEditForm from "../form/ResumeEditForm";
 const Template1 = () => {
-  
+  const educationInitialState = {
+    title: " MSc in Ecommerce and Buisness Administration",
+    subject: "University Of Chicago",
+    date: "09/2008-06/2010",
+  };
+  const [educationDetails, setEducationDetails] = useState(
+    educationInitialState
+  );
+  const personalDataInitialState = {
+    name: " John Doe",
+    profession: "Buisness Devlopement Manager",
+    phone: "2217321098",
+    email: " john.doe@email.com",
+    country: "Gujarat, India ",
+    introduction: "09/2008-06/2010",
+    linkedin: "john.doe",
+  };
+  const [personalDetails, setPersonalDetails] = useState(
+    personalDataInitialState
+  );
+
+  const WorkExperienceInitialState = {
+    heading: " John Doe",
+    sub_heading: "Buisness Devlopement Manager",
+    date: "09/2008-06/2010",
+    description1:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+    description3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+  };
+  const [workExperience, setWorkExperience] = useState(
+    WorkExperienceInitialState
+  );
+
+  const projectsInitialState = {
+    heading: " John Doe",
+    subheading: "Buisness Devlopement Manager",
+
+    description1:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+    description2:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+    description3:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+  };
+  const [projectDetails, setProjectDetails] = useState(projectsInitialState);
+
+ 
+
+  // useEffect(()=>{
+  //   console.log(skillDetails);
+  // },[skillDetails])
+
+  const [skillDetails, setSkillDetails] = useState([]);
+
+
+  const pdfRef = useRef();
   return (
     <Fragment>
+    
     <div className="template1Formatter">
 
     <div className="template1Holder">
@@ -150,7 +210,16 @@ const Template1 = () => {
       </div>
     </div>
     </div>
-    <ResumeEditForm></ResumeEditForm>
+    <ResumeEditForm  educationDetails={educationDetails}
+    setEducationDetails={setEducationDetails}
+    personalDetails={personalDetails}
+    setPersonalDetails={setPersonalDetails}
+    projectDetails={projectDetails}
+    setProjectDetails={setProjectDetails}
+    workExperience={workExperience}
+    setWorkExperience={setWorkExperience}
+    skillDetails={skillDetails}
+    setSkillDetails={setSkillDetails}></ResumeEditForm>
     </Fragment>
   );
 };

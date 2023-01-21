@@ -2,7 +2,7 @@ import { Card,Container,Button } from "react-bootstrap";
 import BasicImage from '../../assets/basic-resume-template.png';
 import MinimalistImage from '../../assets/minimalist-resume-template.png';
 import { useNavigate } from "react-router-dom";
-function Home(){
+function Resume(){
     const navigate=useNavigate()
     const submitHandler=()=>{
         navigate('/temp2')
@@ -38,4 +38,4 @@ function Home(){
 </Container>
     )
 }
-export default Home; 
+export default Resume; 
