@@ -21,7 +21,7 @@ function NavigationBar() {
               </Link>
              
 
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/resumes">
                 RESUMES
               </Link>
 
