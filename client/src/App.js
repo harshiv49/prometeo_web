@@ -6,6 +6,7 @@ import NavigationBar from './components/navbar/Navbar';
 import Template1 from "./components/template1/Template1";
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
+import Home from "./components/home/home";
 import PrivateRoute from './components/PrivateRoutes';
 function App() {
   return (
