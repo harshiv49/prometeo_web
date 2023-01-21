@@ -5,8 +5,12 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPhoneFill } from "react-icons/bs";
 import { BiLocationPlus } from "react-icons/bi";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
-const template1 = () => {
+import { Fragment } from "react";
+import ResumeEditForm from "../form/ResumeEditForm";
+const Template1 = () => {
+  
   return (
+    <Fragment>
     <div className="template1Formatter">
 
     <div className="template1Holder">
@@ -14,7 +18,7 @@ const template1 = () => {
       <div className="template1Header">
         <div className="leftHalfHeaderTemplate1">
           <div className="template1Image">
-            <img src={image1} alt="Photo" className="template1ProfileImage" />
+            <img src={image1} alt="profile-image" className="template1ProfileImage" />
           </div>
           <div className="template1NameAndPosition">
             <h2>Jane Roe</h2>
@@ -92,7 +96,9 @@ const template1 = () => {
       </div>
     </div>
     </div>
+    <ResumeEditForm></ResumeEditForm>
+    </Fragment>
   );
 };
 
-export default template1;
+export default Template1;
