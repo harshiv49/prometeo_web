@@ -1,35 +1,36 @@
 import { Fragment } from "react";
 import {Form,Container,Button} from 'react-bootstrap'
 
-const ProjectForm=()=>{
+const ProjectForm=({projectDetails,setProjectDetails})=>{
+  const submitHandler=(e)=>{
+    e.preventDefault();
+  }
 return(
+
 <Container style={{width:'80%'}}>
-        <Form>
+        <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="work-heading">
             <Form.Label>Heading</Form.Label>
-            <Form.Control type="text" placeholder="Enter heading" />
+            <Form.Control type="text"  value={projectDetails.heading} onChange={(event)=>setProjectDetails({...projectDetails,heading:event.target.price})} placeholder="Enter heading" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="work-sub-heading">
             <Form.Label>Sub heading</Form.Label>
-            <Form.Control type="text" placeholder="Enter Sub Heading" />
+            <Form.Control type="text" value={projectDetails.sub_heading} onChange={(event)=>setProjectDetails({...projectDetails,sub_heading:event.target.price})} placeholder="Enter Sub Heading" />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="subject">
-            <Form.Label>Date</Form.Label>
-            <Form.Control type="text" placeholder="Enter Date" />
-          </Form.Group>
+       
           <Form.Group className="mb-3" controlId="description1">
             <Form.Label>Description1</Form.Label>
-            <Form.Control as="textarea" placeholder="Enter Description1" rows={6} />
+            <Form.Control as="textarea" value={projectDetails.description1} onChange={(event)=>setProjectDetails({...projectDetails,description1:event.target.price})} placeholder="Enter Description1" rows={6} />
           </Form.Group>
           
           <Form.Group className="mb-3" controlId="description2">
             <Form.Label>Description2</Form.Label>
-            <Form.Control as="textarea" placeholder="Enter Description2" rows={6} />
+            <Form.Control as="textarea" value={projectDetails.description2} onChange={(event)=>setProjectDetails({...projectDetails,description2:event.target.price})} placeholder="Enter Description2" rows={6} />
           </Form.Group>
           
           <Form.Group className="mb-3" controlId="description3">
           <Form.Label>Description3</Form.Label>
-          <Form.Control as="textarea" placeholder="Enter Description3" rows={6} />
+          <Form.Control as="textarea" value={projectDetails.description3} onChange={(event)=>setProjectDetails({...projectDetails,description3:event.target.price})} placeholder="Enter Description3" rows={6} />
         </Form.Group>
           
 

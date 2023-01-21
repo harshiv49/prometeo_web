@@ -12,8 +12,9 @@ function App() {
     <Routes>
       {/* <PrivateRoute exact path="/" component={} /> */}
          <Route path="/" element={<NavigationBar></NavigationBar>}>
-         <Route index={true} element={<Template></Template>} />
-         <Route index={true} path="template1" element={<Template1></Template1>}/>
+         <Route index={true} element={<Home/>} />
+         <Route path='temp2' element={<Template1></Template1>} />
+         <Route path='temp1' element={<Template></Template>} />
          <Route path="SignUp" element={<SignUp />} />
          <Route path="Login" element={<Login />} />
       </Route>

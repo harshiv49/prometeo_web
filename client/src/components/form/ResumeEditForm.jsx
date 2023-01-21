@@ -9,7 +9,8 @@ import PersonalEditForm from "./PersonalEditForm";
 import SkillsForm from "./SkillForm";
 import WorkExperienceForm from "./WorkExperience";
 import ProjectForm from "./ProjectForm";
-const ResumeEditForm = () => {
+const ResumeEditForm = ({educationDetails,setEducationDetails,setPersonalDetails,personalDetails,workExperience ,setWorkExperience,projectDetails,setProjectDetails,skillDetails,setSkillDetails}) => {
+  
   const [wantsToUpdateEducationalDetails,setWantsToUpdateEducationalDetails]=useState(false);
   const [wantsToUpdateSkills,setWantsToUpdateSkills]=useState(false);
   const [wantsToUpdatePersonalDetails,setWantsToUpdatePersonalDetails]=useState(false);
@@ -50,7 +51,7 @@ const ResumeEditForm = () => {
     <AiFillPlusSquare style={{fontSize:"3rem"}}/>
     </div>
       {wantsToUpdateEducationalDetails&&(
-        <EductaionalForm></EductaionalForm>
+        <EductaionalForm educationDetails={educationDetails} setEducationDetails={setEducationDetails}></EductaionalForm>
        ) 
       }
 
@@ -61,7 +62,7 @@ const ResumeEditForm = () => {
      
 
       {wantsToUpdatePersonalDetails&&(
-        <PersonalEditForm></PersonalEditForm>
+        <PersonalEditForm  personalDetails={personalDetails} setPersonalDetails={setPersonalDetails} ></PersonalEditForm>
         ) 
       }
       
@@ -72,7 +73,7 @@ const ResumeEditForm = () => {
       </div>
      
       {wantsToUpdateWorkExperience&&(
-          <WorkExperienceForm></WorkExperienceForm>
+          <WorkExperienceForm  workExperience={workExperience} setWorkExperience={setWorkExperience}  ></WorkExperienceForm>
         ) 
       }
       <div>
@@ -83,7 +84,7 @@ const ResumeEditForm = () => {
     <AiFillPlusSquare style={{fontSize:"3rem"}}/>
     </div>
       {wantsToUpdateProjects&&(
-        <ProjectForm></ProjectForm>
+        <ProjectForm projectDetails={projectDetails} setProjectDetails={setProjectDetails}  ></ProjectForm>
        ) 
       }
       </div>
@@ -94,7 +95,7 @@ const ResumeEditForm = () => {
       </div>
 
       {wantsToUpdateSkills&&(
-      <SkillsForm></SkillsForm>) 
+      <SkillsForm skillDetails={skillDetails} setSkillDetails={setSkillDetails}></SkillsForm>) 
       }
 
       
