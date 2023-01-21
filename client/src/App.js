@@ -7,13 +7,15 @@ import Template1 from "./components/template1/Template1";
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import PrivateRoute from './components/PrivateRoutes';
-import Home from './components/home/home';
+import Resume from './components/resume/Resume';
+
 function App() {
   return (
     <Routes>
       {/* <PrivateRoute exact path="/" component={} /> */}
          <Route path="/" element={<NavigationBar></NavigationBar>}>
-         <Route index={true} element={<Home/>} />
+         {/*  <Route index={true} element={<Home/>} />*/}
+         <Route path='resumes' element={<Resume></Resume>} />
          <Route path='temp2' element={<Template1></Template1>} />
          <Route path='temp1' element={<Template></Template>} />
          <Route path="SignUp" element={<SignUp />} />
