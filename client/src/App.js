@@ -6,8 +6,8 @@ import Template1 from "./components/template1/Template1";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import PrivateRoute from "./components/PrivateRoutes";
-import Home from "./components/home/home";
 import HomePage from "./components/HomePage/HomePage";
+import Resume from "./components/resume/Resume";
 function App() {
   return (
     <Routes>
@@ -21,7 +21,7 @@ function App() {
             <NavigationBar />
             <Routes>
             <Route index={true} element={<HomePage />} />
-            <Route path="resumes" element={<Home />} />
+            <Route path="resumes" element={<Resume />} />
             <Route path="temp2" element={<Template1></Template1>} />
             <Route path="temp1" element={<Template></Template>} />
             </Routes>

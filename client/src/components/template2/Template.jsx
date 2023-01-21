@@ -1,10 +1,11 @@
 import { Fragment } from "react";
 import { Container } from "react-bootstrap";
 import ResumeEditForm from "../form/ResumeEditForm";
+
 import { GoLocation, GoMail } from "react-icons/go";
 import { GrSkype } from "react-icons/gr";
 import { BsPhone, BsLinkedin } from "react-icons/bs";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import ReactToPdf from "react-to-pdf";
 import Pdf from "react-to-pdf";
 import "./Template.css";
@@ -48,7 +49,7 @@ const Template = () => {
 
   const projectsInitialState = {
     heading: " John Doe",
-    sub_heading: "Buisness Devlopement Manager",
+    subheading: "Buisness Devlopement Manager",
 
     description1:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
@@ -59,11 +60,15 @@ const Template = () => {
   };
   const [projectDetails, setProjectDetails] = useState(projectsInitialState);
 
+ 
+
   // useEffect(()=>{
   //   console.log(skillDetails);
   // },[skillDetails])
 
   const [skillDetails, setSkillDetails] = useState([]);
+
+
   const pdfRef = useRef();
   return (
     <div className="template2">
@@ -162,9 +167,9 @@ const Template = () => {
             <div className="projects">
               <p className="projects-heading">{projectDetails.heading}</p>
               <p className="projects-sub-heading">
-                {projectDetails.sub_heading}
+                {projectDetails.subheading}
               </p>
-              <p className="projects-date">{projectDetails.date}</p>
+            
 
               <div className="projects-sub-container">
                 <ul>
