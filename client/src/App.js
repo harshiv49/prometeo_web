@@ -7,6 +7,7 @@ import Template1 from "./components/template1/Template1";
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import PrivateRoute from './components/PrivateRoutes';
+import Home from './components/home/home';
 function App() {
   return (
     <Routes>
