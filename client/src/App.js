@@ -13,6 +13,9 @@ function App() {
     <Routes>
       <Route path="SignUp" element={<SignUp />} />
       <Route path="Login" element={<Login />} />
+      {
+        
+      }
       <Route
         path="/"
         element={
