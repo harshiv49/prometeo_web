@@ -11,19 +11,19 @@
 }
 .template2{
     display: flex;
-    gap:10px;
     padding:16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 .scrollableResume{
-overflow-y: scroll;
 width:50%; 
-height:90vh; 
 border:1px solid rgba(0, 0, 0, 0.316);
 }
 .resume-holder{
     display: flex;
     justify-content: center;
-    
 }
 .heading-name{
     font-size: 2.5rem;
