@@ -1,0 +1,31 @@
+.homePageWrapper{
+    min-height:100vh;
+    padding:5vh;
+}
+
+.landingPage{
+    height:80vh;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.316);
+}
+.leftHalfLanding{
+    width:50%;
+    display: flex;
+    padding-left: 10%;
+    flex-direction: column;
+    justify-content: center;
+}
+.rightHalfLanding{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightHalfLanding img{
+    height: 600px;
+}
+.featuresSections{
+    padding-top:10vh;
+display: flex;
+justify-content: space-evenly;
+}
