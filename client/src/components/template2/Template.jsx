@@ -8,6 +8,7 @@ import { BsPhone, BsLinkedin } from "react-icons/bs";
 import { useState, useRef,useEffect } from "react";
 import ReactToPdf from "react-to-pdf";
 import Pdf from "react-to-pdf";
+import ReactToPrint from 'react-to-print';
 import "./Template.css";
 import {Button} from "react-bootstrap";
 const Template = () => {
@@ -88,11 +89,11 @@ const Template = () => {
   const pdfRef = useRef();
   return (
     <div className="template2">
-      <div ref={pdfRef} className="scrollableResume">
+      <div  className="scrollableResume">
         <h1 style={{ textAlign: "center", color: "black" }}>
           RESUME TEMPLATE 2{" "}
         </h1>
-        <div className="resume-holder">
+        <div className="resume-holder" ref={pdfRef}>
           <div className="resume">
             <div className="heading">
               <p className="heading-name">{personalDetails.name}</p>
@@ -229,9 +230,10 @@ const Template = () => {
         setSkillDetails={setSkillDetails}
       ></ResumeEditForm>
 
-      <Pdf targetRef={pdfRef} filename="personalEmail.pdf">
-        {({ toPdf }) => <Button onClick={toPdf}>Generate Pdf</Button>}
-      </Pdf>
+<ReactToPrint
+        trigger={() => <button>Print this out!</button>}
+        content={() => pdfRef.current}
+      />
     </div>
       </div>
       
