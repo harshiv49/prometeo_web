@@ -1,12 +1,23 @@
 import { Fragment } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import {Button} from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import { NavDropdown } from "react-bootstrap";
+import { useAuth } from "../../context/AuthContext";
 
 function NavigationBar() {
+
+  const {currentUser,logOut}  = useAuth();
+  const navigate  = useNavigate();
+  const handleLogOut =async (e) =>{
+    e.preventDefault();
+    try {
+      await logOut()
+      navigate('/')
+    } catch (error) {
+      console.log(error);
+    }
+  }
  
   return (
     <Fragment>
@@ -32,6 +43,7 @@ function NavigationBar() {
               <Link className="nav-link" to="/SignUp">
                 SIGN UP 
               </Link>
+              {currentUser && <Button rounded={true} onClick={handleLogOut}>Log Out</Button>}
             </Nav>
           </Navbar.Collapse>
         
