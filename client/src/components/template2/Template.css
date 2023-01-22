@@ -148,3 +148,11 @@ h1{
     width: 100% ;
     justify-content: center;
 }
+.workExperienceButtons{
+    margin:2vh; 
+}
+.ToggleButtonExperience{
+    font-size: 0.8vw;
+    padding:4px;
+    margin-right:10px;
+}

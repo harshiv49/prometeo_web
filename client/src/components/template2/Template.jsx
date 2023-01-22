@@ -32,7 +32,9 @@ const Template = () => {
     personalDataInitialState
   );
 
-  const WorkExperienceInitialState = {
+  const WorkExperienceInitialState = 
+    [
+      {
     heading: " John Doe",
     sub_heading: "Buisness Devlopement Manager",
     date: "09/2008-06/2010",
@@ -42,7 +44,21 @@ const Template = () => {
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
     description3:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
-  };
+      },
+
+      {
+        heading: "Prakhar Hoe",
+        sub_heading: "Buisness Devlopement Manager",
+        date: "09/2008-06/2010",
+        description1:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+        description2:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+        description3:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rem deserunt nam eum optio illo inventore voluptatem voluptatum iste quos non, reiciendis impedit ratione, expedita possimus assumenda, repellat pariatur earum.",
+          }
+    ]
+  ;
   const [workExperience, setWorkExperience] = useState(
     WorkExperienceInitialState
   );
@@ -146,18 +162,35 @@ const Template = () => {
 
             <div className="work-experience">
               <p className="work-experience-heading">
-                {workExperience.heading}
+                {workExperience[0].heading}
               </p>
               <p className="work-experience-sub-heading">
-                {workExperience.sub_heading}
+                {workExperience[0].sub_heading}
               </p>
-              <p className="work-experience-date">{workExperience.date}</p>
+              <p className="work-experience-date">{workExperience[0].date}</p>
 
               <div className="work-experience-sub-container">
                 <ul>
-                  <li>{workExperience.description1}</li>
-                  <li>{workExperience.description2}</li>
-                  <li>{workExperience.description3}</li>
+                  <li>{workExperience[0].description1}</li>
+                  <li>{workExperience[0].description2}</li>
+                  <li>{workExperience[0].description3}</li>
+                </ul>
+              </div>
+            </div>
+            <div className="work-experience">
+              <p className="work-experience-heading">
+                {workExperience[1].heading}
+              </p>
+              <p className="work-experience-sub-heading">
+                {workExperience[1].sub_heading}
+              </p>
+              <p className="work-experience-date">{workExperience[1].date}</p>
+
+              <div className="work-experience-sub-container">
+                <ul>
+                  <li>{workExperience[1].description1}</li>
+                  <li>{workExperience[1].description2}</li>
+                  <li>{workExperience[1].description3}</li>
                 </ul>
               </div>
             </div>
