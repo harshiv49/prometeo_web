@@ -81,24 +81,24 @@ const Template1 = () => {
             <img src={image1} alt="profile-image" className="template1ProfileImage" />
           </div>
           <div className="template1NameAndPosition">
-            <h2>Jane Roe</h2>
-            <h6>Backend Developer</h6>
+            <h2>{personalDetails.name}</h2>
+            <h6>{personalDetails.profession}</h6>
           </div>
         </div>
         <div className="rightHalfHeaderTemplate1">
           <ul className="template1ContactList">
             <li>
-              example.email@gmail.com{" "}
+            {personalDetails.email}{" "}
               <AiOutlineMail style={{ fontSize: "24px" }} />{" "}
             </li>
             <li>
-              123456789 <BsFillPhoneFill />
+            {personalDetails.phone} <BsFillPhoneFill />
             </li>
             <li>
-              Example City, Country <BiLocationPlus />
+            {personalDetails.country} <BiLocationPlus />
             </li>
             <li>
-              linkedIn.com <BsLinkedin />{" "}
+            {personalDetails.linkedin}<BsLinkedin />{" "}
             </li>
             <li>
               github.com <BsGithub />
@@ -109,8 +109,7 @@ const Template1 = () => {
 
       {/* ONE LINER */}
       <div className="template1OneLiner">
-        A clear and concise summary of your skills, experience, and
-        qualifications that highlights your value as a candidate.
+      {personalDetails.introduction}
       </div>
 
       {/* MAIN BODY OF RESUME */}
@@ -120,25 +119,22 @@ const Template1 = () => {
           <div className="workExperienceTemplate1">
             <h2>Work Experience</h2>
             <div className="experienceCardTemplate1">
-              <h3>Business Developer Manager</h3>
-              <h5>Company Name</h5>
+              <h3>{workExperience.heading}</h3>
+              <h5>{workExperience.sub_heading}</h5>
               <div className="experienceDateAndLocationTemplate1">
-                <div className="date">09/2014-06/2017</div>
-                <div className="place">New York,USA</div>
+                <div className="date">{workExperience.date}</div>
+                <div className="place">{personalDetails.country}</div>
               </div>
               <div className="experiencePointsTemplate1">
                 <ul className="experienceListTemplate1">
                   <li>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere!
+                   {workExperience.description1}
                   </li>
                   <li>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere!
+                  {workExperience.description2}
                   </li>
                   <li>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Reprehenderit, magni facere!
+                  {workExperience.description3}
                   </li>
                   
                 </ul>
@@ -151,14 +147,9 @@ const Template1 = () => {
           <div className="educationSectionTemplate1">
             <h2>EDUCATION</h2>
             <div className="educationDetails">
-              <h4>Msc in Economics and Business Admin</h4>
-              <h5>The University of California</h5>
-              <h6>09/2010-0/6/2015</h6>
-            </div>
-            <div className="educationDetails">
-              <h4>Msc in Economics and Business Admin</h4>
-              <h5>The University of California</h5>
-              <h6>09/2010-0/6/2015</h6>
+              <h4>{educationDetails.title}</h4>
+              <h5>{educationDetails.subject}</h5>
+              <h6>{educationDetails.date}</h6>
             </div>
           </div>
         </div>
