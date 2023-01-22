@@ -73,11 +73,11 @@ const Template = () => {
   const pdfRef = useRef();
   return (
     <div className="template2">
-      <div ref={pdfRef} className="scrollableResume">
+      <div  className="scrollableResume">
         <h1 style={{ textAlign: "center", color: "black" }}>
           RESUME TEMPLATE 2{" "}
         </h1>
-        <div className="resume-holder">
+        <div className="resume-holder" ref={pdfRef}>
           <div className="resume">
             <div className="heading">
               <p className="heading-name">{personalDetails.name}</p>
